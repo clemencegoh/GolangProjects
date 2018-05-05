@@ -8,6 +8,10 @@ import (
 	"encoding/json"
 	"path/filepath"
 	"io"
+	"log"
+	"sync"
+	"strconv"
+	"github.com/gorilla/mux"
 )
 
 
@@ -15,6 +19,7 @@ type Page struct{
 	Title string
 	Body []byte
 }
+
 
 // following is for testing only, example webpage
 func createTestWebpage() string{
@@ -46,34 +51,30 @@ func (p *Page) save() error {
 }
 
 
-
+// lookForResume looks through all files for resumeID specified
 func lookForResume(resumeID int) string{
-	currentDir := getCurrentDir()
+	currentDir := getCurrentDir() + "\\WebApplication-Resume\\Resumes"
 	filename := ""
 	err := filepath.Walk(currentDir, func(path string, info os.FileInfo, err error) error{
 		resume,err := loadResume(path)
 		if err != io.EOF{
 			if resume.compareID(resumeID){
 				filename = path
-
 				return io.EOF
 			}
 		}
-
 		return nil
 	})
-
 	if err != io.EOF{
 		fmt.Println(err.Error())
 	}
-
 	if filename == ""{
 		fmt.Println("File not found")
 	}
-
 	return filename
 }
 
+// loadResume loads ResumeDetails from a file
 func loadResume(file string) (ResumeDetails, error){
 	//fmt.Println(file)
 	raw, err := ioutil.ReadFile(file)
@@ -173,18 +174,41 @@ func getCurrentDir() string{
 	return pwd
 }
 
-
-type ResumeDetails struct{
-	Name string `json:"Name"`
-	CurrentJobTitle string `json:"CurrentJobTitle"`
-	CurrentJobDescription string `json:"CurrentJobDescription"`
-	CurrentJobCompany string `json:"CurrentJobCompany"`
-	ResumeID int `json:"ResumeId"`
+// global
+var counter = IDCounter{
+	ID:0,
+	mu:sync.Mutex{},
 }
+
+// PostHandler converts post request body to string
+func PostHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" {
+		decoder := json.NewDecoder(r.Body)
+		var rd ResumeDetails
+		err := decoder.Decode(&rd)
+		if err!=nil{
+			panic(err)
+		}
+		defer r.Body.Close()
+		log.Println(rd.Name + "Acquired")
+
+		// determine id
+		id := counter.GetAndIncrement()
+
+		// save resume and id
+		saveResumeDetails(rd,id)
+
+		log.Println("Done saving")
+
+	} else {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+	}
+}
+
 
 // saveResumeDetails returns err, id
 // method call for all ResumeDetails Types
-func (rd *ResumeDetails) saveResumeDetails(resumeID int) (error, int){
+func saveResumeDetails(rd ResumeDetails, resumeID int) (error, int){
 	filename := rd.Name + ".txt"
 	fmt.Println(filename + " generated")
 
@@ -195,40 +219,61 @@ func (rd *ResumeDetails) saveResumeDetails(resumeID int) (error, int){
 		fmt.Println(err)
 		return err, -1
 	}
-	return ioutil.WriteFile(filename, res, 0600), resumeID
-}
 
-// returns a json version
-func (rd *ResumeDetails) toString() string{
-	return toJson(rd)
-}
-
-func (rd *ResumeDetails) compareID(resumeID int) bool{
-	if rd.ResumeID==resumeID{
-		return true
+	// open file and save to file
+	saveToPath := getCurrentDir() + "\\WebApplication-Resume\\Resumes\\" + filename
+	//fmt.Println(saveToPath)
+	f, err := os.OpenFile(saveToPath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
+	if err != nil {
+		return err,-1
 	}
-	return false
+	n, err := f.Write(res)
+	if err == nil && n < len(res) {
+		err = io.ErrShortWrite
+	}
+	if err1 := f.Close(); err == nil {
+		err = err1
+	}
+
+	return err, resumeID
+}
+
+func GetHandler(w http.ResponseWriter, r *http.Request){
+	if r.Method == "GET" {
+		// parse params
+		vars := mux.Vars(r)
+		id := vars["id"]
+
+		resID, err := strconv.ParseInt(id,10,64)
+		if err!=nil{
+			panic(err)
+		}
+		filename := lookForResume(int(resID))
+
+		p := loadAndDislayJson(filename,false)
+
+		fmt.Fprintf(w, "<h1>%s</h1><div>Name: %s\n" +
+			"Current Job Description: %s\n" +
+			"Current Job Title: %s\n" +
+			"Current Job Company: %s</div>",
+			p.Name, p.Name,
+			p.CurrentJobDescription,
+			p.CurrentJobTitle,
+			p.CurrentJobCompany)
+	} else {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+	}
 }
 
 func main() {
-	//lastResumeID := 0
+	r := mux.NewRouter()
 
-	// handler functions
-	//http.HandleFunc("/view/", viewHandler)
-	//http.HandleFunc("/api/", apiHandler)
-	//log.Fatal(http.ListenAndServe(":8080", nil))
+	// endpoints here
+	r.HandleFunc("/api/getResume/{id}",GetHandler)
+	r.HandleFunc("/api/uploadResumeDetails",PostHandler)
 
-	// try out write to file
-	var res = ResumeDetails{
-		Name: "Clemence",
-		CurrentJobCompany: "SUTD",
-		CurrentJobTitle: "Student",
-		CurrentJobDescription: "Study",
+	if err := http.ListenAndServe(":8080", r); err != nil {
+		log.Fatal(err)
 	}
-
-	res.saveResumeDetails(0)
-	filename := lookForResume(0)
-	loadAndDislayJson(filename,true)
-
 
 }
