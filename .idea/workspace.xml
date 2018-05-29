@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a11afb0-8010-45ef-8c2c-de4d10e9b691" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/problems/permutations/restricted-movement-permutation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,13 +32,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WebAppMain.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WebAppMain.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-464">
-              <caret line="231" column="30" lean-forward="true" selection-start-line="231" selection-start-column="30" selection-end-line="231" selection-end-column="30" />
+            <state relative-caret-position="3285">
+              <caret line="231" column="30" selection-start-line="231" selection-start-column="30" selection-end-line="231" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restricted-movement-permutation.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/problems/permutations/restricted-movement-permutation.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#14#147#0" expanded="true" />
+                <element signature="e#14#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,11 +65,8 @@
       <file leaf-file-name="WebAppTest.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-              <folding>
-                <element signature="e#14#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="705">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -59,8 +74,8 @@
       <file leaf-file-name="ResumeDetails.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -87,7 +102,7 @@
       <find>caught</find>
     </findStrings>
   </component>
-  <component name="GOROOT" path="C:\Go" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -99,6 +114,8 @@
         <option value="$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go" />
         <option value="$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go" />
         <option value="$PROJECT_DIR$/WebApplication-Resume/WebappStatus" />
+        <option value="$PROJECT_DIR$/leetcode/main.go" />
+        <option value="$PROJECT_DIR$/leetcode/problems/permutations/restricted-movement-permutation.go" />
       </list>
     </option>
   </component>
@@ -111,11 +128,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="50" />
-    <option name="y" value="-5" />
-    <option name="width" value="2510" />
-    <option name="height" value="1445" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -132,7 +148,20 @@
             <path>
               <item name="GolangProjects" type="b2602c69:ProjectViewProjectNode" />
               <item name="GolangProjects" type="462c0819:PsiDirectoryNode" />
-              <item name="WebApplication-Resume" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="problems" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GolangProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GolangProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="problems" type="462c0819:PsiDirectoryNode" />
+              <item name="permutations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build WebAppTest.go">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build " type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GolangProjects" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -212,15 +241,25 @@
       <filePath value="$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GolangProjects" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/leetcode/main.go" />
+      <directory value="$PROJECT_DIR$" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.go build WebAppMain.go ResumeDetails.go" />
       <item itemvalue="Go Build.go build GolangProjects/" />
       <item itemvalue="Go Build.go build " />
       <item itemvalue="Go Build.go build WebAppMain.go" />
       <item itemvalue="Go Build.go build WebAppTest.go" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build WebAppTest.go" />
         <item itemvalue="Go Build.go build WebAppMain.go" />
         <item itemvalue="Go Build.go build GolangProjects/" />
@@ -229,14 +268,15 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13154362" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13304721" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295302" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28490028" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28484848" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32905984" />
@@ -260,11 +300,29 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3285">
+          <caret line="231" column="30" lean-forward="true" selection-start-line="231" selection-start-column="30" selection-end-line="231" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2822">
           <caret line="174" column="35" selection-start-line="174" selection-start-column="35" selection-end-line="174" selection-end-column="35" />
-          <folding>
-            <element signature="e#14#147#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -275,13 +333,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus" />
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -303,13 +355,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus" />
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -352,13 +398,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus" />
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -381,73 +421,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/builtin/builtin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/path/filepath/path.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="392" column="5" selection-start-line="392" selection-start-column="5" selection-end-line="392" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Go/src/builtin/builtin.go" />
+    <entry file="file://C:/Go/src/path/filepath/path.go" />
     <entry file="file://$PROJECT_DIR$/Clemence_0.txt" />
     <entry file="file://$PROJECT_DIR$/Clemence.txt" />
-    <entry file="file://C:/Go/src/io/ioutil/ioutil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Go/src/io/ioutil/ioutil.go" />
     <entry file="file://$PROJECT_DIR$/WebsiteTrial.go" />
-    <entry file="file://$PROJECT_DIR$/TestPage.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="488" selection-start-line="488" selection-end-line="488" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/net/http/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1941" selection-start-line="1941" selection-end-line="1941" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/NotClem.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestPage.txt" />
+    <entry file="file://C:/Go/src/runtime/panic.go" />
+    <entry file="file://C:/Go/src/net/http/server.go" />
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/NotClem.txt" />
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/ResumeDetails.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/Clemence.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/NotClemence.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/Clemence.txt" />
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/Resumes/NotClemence.txt" />
+    <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebappStatus" />
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppTest.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="705">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -460,11 +457,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApplication-Resume/WebAppMain.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-464">
-          <caret line="231" column="30" lean-forward="true" selection-start-line="231" selection-start-column="30" selection-end-line="231" selection-end-column="30" />
+        <state relative-caret-position="3285">
+          <caret line="231" column="30" selection-start-line="231" selection-start-column="30" selection-end-line="231" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#14#147#0" expanded="true" />
+            <element signature="e#14#80#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/problems/permutations/restricted-movement-permutation.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
